@@ -1,0 +1,96 @@
+var http = require('http');
+var express = require('express');
+var app = express();
+const port = 3000;
+var fs = require('fs');
+
+//const { response } = require('express');
+// http.createServer(function(request, response) {
+//     response.writeHead(200, {
+//         'Content-Type': 'text/json'  
+//     });
+
+// fs.readFile('profile.json', function(err, content){
+//     response.write(content);   
+// });
+// fs.readFile('mall.json', function(err, content){
+//     response.write(content);
+//     response.end();
+// });
+//res.setHeader('Content-Type', 'text/html');
+var mall = [];
+var arr = [];
+
+function calculate_age(dob) {
+  var diff = Date.now() - dob.getTime();
+  var age = new Date(diff);
+  return Math.abs(age.getUTCFullYear() - 1970);
+}
+
+
+app.get("/", function (request, response) {
+
+  fs.readFile('mall.json', (err, data) => {
+    if (err) throw err;
+    mall = JSON.parse(data);
+
+    //console.log(mall);
+    //console.log(profile);
+    //console.log(data);
+
+  });
+  fs.readFile('profile.json', (err, data) => {
+    if (err) throw err;
+    //console.log(data);
+    let profile = JSON.parse(data);
+
+    for (pro in profile) {
+      var date = profile[pro].DOB.split("/")
+      var age = calculate_age(new Date((parseInt(date[0])), (parseInt(date[1])), (parseInt(date[2]))));
+      var name = profile[pro].Name
+      var city = profile[pro].City
+      //console.log(city)
+      //console.log(Malls[city].AgeLimit)
+      
+      if (age >= mall[city].AgeLimit) {
+        //response.send(name + " You can visit " + mall[city].MallName.join(", ") + "\n")
+        arr = arr + (name + " You can visit " + mall[city].MallName.join(", ") + "\n")
+
+      }
+      else {
+        //response.send(name + ", You are not eligible to go for any of the malls in our city" + "\n")
+        arr = arr + (name + ", You are not eligible to go for any of the malls in our city" + "\n")
+      }
+    }
+    response.send(arr);
+  
+    //console.log(mall);
+    // console.log(profile);
+  });
+  
+});
+app.listen(port, () => console.log(`It is listening on port ${port}!`))
+// }).listen(8081);
+
+
+
+// console.log('Server running at http://127.0.0.1:8081/');
+
+// app.get('/', (req, res) => {
+//     res.send('Hello World, from express');
+//});
+
+// var fs = require('fs');
+
+// fs.readFile('profile.json', (err, data) => {
+//     if (err) throw err;
+//     let profile = JSON.parse(data);
+//     console.log(profile);
+// });
+
+// fs.readFile('mall.json', (err, data) => {
+//     if (err) throw err;
+//     let mall = JSON.parse(data);
+//     console.log(mall);
+// });
+

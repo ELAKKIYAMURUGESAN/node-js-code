@@ -1,0 +1,89 @@
+// var str = 'Hi, How are you!!!'; 
+// console.log(str.startsWith('Hi'));
+
+// var str = 'I got a mail, Thanks'; 
+// console.log(str.endsWith('Thanks')); 
+// console.log(str.endsWith('welcome'))
+
+// var a = "Test"; 
+// var b = 10; 
+// console.log(`Variable1: ${a}, variable2: ${b}`);
+
+// var num = 27; 
+// console.log("Square root: " + Math.sqrt(num));
+// console.log("Cube root: " + Math.cbrt(num));
+ 
+// var x = 3.1438222333;
+// console.log("Round of: "+Math.round(x))
+
+// var A = Date.now(); 
+// console.log("In milliseconds:" + A);
+
+// var dateValue = new Date(2020, 9, 11, 19, 30, 33); 
+// console.log( dateValue.toUTCString());
+
+// var dateValue = new Date(2020, 9, 11, 19, 30, 33); 
+// console.log( dateValue.toISOString());
+
+// var dateValue = new Date("September 20, 2020 11:00:00");
+// console.log("Date:  " + dateValue.getUTCDate());
+// console.log("Month: " + dateValue.getUTCMonth());
+// console.log("Year:  " + dateValue.getUTCFullYear());
+
+ 
+// var date1 = new Date("06/30/2019"); 
+// var date2 = new Date("07/10/2019"); 
+// var Dif = date2.getTime() - date1.getTime(); 
+// var Diff = Dif / (1000 * 3600 * 24); 
+// console.log("DifferenceDiff + "days")
+
+
+//console.log("Minimum value in a list is " + Math.min(12,87,67,87));
+//console.log("Maximum value in a list is " + Math.max(12,87,67,87));
+
+// var array = [10,15,30]; 
+// var val = array.entries(); 
+// console.log(val.next().value);  
+// console.log(val.next().value);  
+// console.log(val.next().value);
+
+//// var arr = ['Hello','World','First','Program'];         
+//// var str = arr.toString(); 
+//// console.log("Returned string is : " + str );
+
+// var arr = [23,46,62,46,24,33];  
+// console.log("Ascending order is  : " + arr.sort());
+// console.log("Descending order is : " + arr.sort().reverse());
+  
+// var arr = [23,46,62,46,24,33]; 
+// //var na = [ ];
+// console.log("last three element: " + arr.slice(3, 6));   
+
+//var ar = [1,2,3,6,7];
+const arr = [1,2,3,4,5];
+console.log("hsh" + arr.splice(2, 1));
+
+
+//////////////////////////
+var date_ob = new Date();
+if(date_ob.getDate() <= 9) {
+var dd = '0' + date_ob.getDate();
+} else {
+var dd = date_ob.getDate();
+}
+if(date_ob.getMonth()  <= 9) {
+var mm = '0' + (date_ob.getMonth() + 1);
+} else {
+var mm = date_ob.getMonth() + 1;
+}
+var yyyy = date_ob.getFullYear();
+var current_date = yyyy + "/" + mm + "/" + dd;
+botContext.printDebugMessage(current_date);
+var GivenDate = botContext.getBotVariable('BookingDate');
+if(GivenDate > current_date) {
+  //botContext.sendMessage('valid date');
+  botContext.setTriggerNextMessage('Location');
+} else {
+  //botContext.sendMessage('provide the valid date');
+}
+///////////////////////////////////////////////////////////////////////

@@ -1,0 +1,30 @@
+[{"Name":"Kavitha","City":"Chennai","DOB":"1999/09/09","Phone number":"9876567898"},
+{"Name":"Kavin","City":"Coimbatore","DOB":"2010/10/10","Phone number":"9856768545"},
+{"Name":"Seetha","City":"Coimbatore","DOB":"2002/11/11","Phone number":"9845435267"},
+{"Name":"Senu","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"},
+{"Name":"Anu","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"},
+{"Name":"Harsitha","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"},
+{"Name":"Abirami","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"},
+{"Name":"Bavithra","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"},
+{"Name":"Chanthini","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"},
+{"Name":"Abarna","City":"Erode","DOB":"1987/12/12","Phone number":"9867543456"}]
+
+
+
+[{"Chennai":{"MallName": ["RKG mall","Fun Mall","Super Mall"],"AgeLimit":20},
+               "Coimbatore":{"MallName": ["Riveraa Mall","Abacus Mall","Zee Mall"],"AgeLimit":21},
+                "Erode":{"MallName": ["ASS Mall","Marina Mall"],"AgeLimit":18},
+                "Trichy":{"MallName": ["TT Mall","Marina Mall"],"AgeLimit":19},
+                "Salem":{"MallName": ["SS Mall","Marina Mall"],"AgeLimit":21},
+                "Tirupur":{"MallName": ["Tup Mall","Marina Mall"],"AgeLimit":22},
+                "Pollachi":{"MallName": ["Aci Mall","Marina Mall"],"AgeLimit":23}}]
+
+    
+
+[{"MallName": ["RKG mall","Fun Mall","Super Mall"],"City":"Chennai","AgeLimit":20},
+    {"MallName": ["Riveraa Mall","Abacus Mall","Zee Mall"],"City":"Coimbatore","AgeLimit":21},
+     {"MallName": ["ASS Mall","Marina Mall"],"City":"Erode","AgeLimit":18},
+     {"MallName": ["TT Mall","Marina Mall"],"City":"Trichy","AgeLimit":19},
+     {"MallName": ["SS Mall","Marina Mall"],"City":"Salem","AgeLimit":21},
+     {"MallName": ["Tup Mall","Marina Mall"],"City":"Tirupur","AgeLimit":22},
+     {"MallName": ["Aci Mall","Marina Mall"],"City":"Pollachi","AgeLimit":23}];

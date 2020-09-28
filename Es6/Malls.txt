@@ -1,0 +1,60 @@
+function calculate_age(dob) { 
+    var diff = Date.now() - dob.getTime();
+    var age = new Date(diff); 
+  
+    return Math.abs(age.getUTCFullYear() - 1970);
+}
+
+
+var profile =[{"Name":"Kavitha","City":"TamilNadu","DOB":"1990/09/09","Phone number":"9876567898"},
+{"Name":"Kavin","City":"Kerala","DOB":"2010/10/10","Phone number":"9856768545"},
+{"Name":"Seetha","City":"Kerala","DOB":"1998/11/11","Phone number":"9845435267"},
+{"Name":"Senu","City":"Karnataka","DOB":"1987/12/12","Phone number":"9867543456"}]
+
+var Malls = [{"MallName":"RKG mall,Fun Mall,Super mall","City":"TamilNadu","AgeLimit":29},
+//{"MallName":"Fun Mall","City":"TamilNadu","AgeLimit":18},
+{"MallName":"Riveraa Mall,Zee mall,Superior mall,VIP mall","City":"Kerala","AgeLimit":20},
+//{"MallName":"Abacus Mall","City":"Kerala","AgeLimit":24},
+//{"MallName":"Super Mall","City":"TamilNadu","AgeLimit":21},
+//{"MallName":"Zee Mall","City":"Kerala","AgeLimit":21},
+{"MallName":"ASS Mall,Marina mall,Supreme mall","City":"Karnataka","AgeLimit":23}]
+//{"MallName":"Marina Mall","City":"Karnataka","AgeLimit":20}]
+console.log(Malls)
+
+for(pro in profile )
+{
+  var date = profile[pro].DOB.split("/")
+//   var dd = parseInt(date[2]);
+//   var mm  = parseInt(date[1]);
+//   var yyyy = parseInt(date[0]);
+//   console.log(yyyy)
+//   console.log(mm)
+//   console.log(dd)
+//   var age = calculate_age(new Date(yyyy,mm,dd))
+  var age = calculate_age(new Date((parseInt(date[0])) , (parseInt(date[1])) , (parseInt(date[2]))));
+  //console.log(age)
+  var name = profile[pro].Name
+  //console.log(name)
+  var city = profile[pro].City
+  //console.log(city)
+  var arr = []
+  
+
+  for (mall in Malls)
+  {
+    if(city == Malls[mall].City && age >= Malls[mall].AgeLimit)
+    {
+      arr.push(Malls[mall].MallName)
+    }
+  } 
+//console.log(arr)
+ if(arr.length > 0)
+{
+  console.log(name + " can visit "+arr.join(",")+ " in " +city)
+}
+
+else
+{
+  console.log(name +" has no malls to visit " + ". " +"Your age is " + age + " it is not in the range" )
+} 
+}

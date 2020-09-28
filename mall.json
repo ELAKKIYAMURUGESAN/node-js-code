@@ -1,0 +1,7 @@
+{"Chennai":{"MallName": ["RKG mall","Fun Mall","Super Mall"],"AgeLimit":20},
+    "Coimbatore":{"MallName": ["Riveraa Mall","Abacus Mall","Zee Mall"],"AgeLimit":21},
+     "Erode":{"MallName": ["Ramee Mall","Marina Mall"],"AgeLimit":18},
+     "Trichy":{"MallName": ["Skywalk Mall","Trick and Track Mall"],"AgeLimit":19},
+     "Salem":{"MallName": ["The Grand Mall","Palladium Mall"],"AgeLimit":21},
+     "Tirupur":{"MallName": ["Phoenix Mall","Hide and seek Mall"],"AgeLimit":22},
+     "Pollachi":{"MallName": ["Forum Mall","Vivira Mall"],"AgeLimit":20}}

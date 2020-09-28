@@ -1,0 +1,31 @@
+//......................
+var det = { name:"Tom", ID:"E1001" }; 
+var copy = det;
+console.log(det);
+console.log(copy);
+copy.name = "elakkiya";
+console.log(det);  
+//................
+var n = 2;
+var res = n;
+res = res + 1;
+console.log(res);
+console.log(n);
+// .................
+var det = { name:"Tom", ID:"E1001" }; 
+var copy = Object.assign({}, det);
+console.log(det);
+console.log(copy);
+copy.name = "elakkiya";
+console.log(det);  
+// .............
+
+
+{ name: 'Tom', ID: 'E1001' }
+{ name: 'Tom', ID: 'E1001' }
+{ name: 'elakkiya', ID: 'E1001' }
+3
+2
+{ name: 'Tom', ID: 'E1001' }
+{ name: 'Tom', ID: 'E1001' }
+{ name: 'Tom', ID: 'E1001' }
