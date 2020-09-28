@@ -1,0 +1,23 @@
+{
+  "name": "documents",
+  "version": "1.0.0",
+  "description": "demo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "index",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "index"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "code"
+  }
+}
